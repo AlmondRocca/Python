@@ -45,6 +45,7 @@ def removePunc(str):
 
 def processToDict():
     tokensToDict = open('tokenized', 'r')
+    processedFile = open('finalcount', 'a')
     wordDict = {}
     #This is the type of thing I was taught to do in java with scanners. Is there a better way?
     for line in tokensToDict:
@@ -54,9 +55,21 @@ def processToDict():
                 wordDict[word] += 1
             else:
                 wordDict[word] = 1
+
     #How do i display this pretty
     print(wordDict)
+
+    #.items takes the key value pairs in a dictionary and turns them into a list of tuples. Each
+    #Each tuple has a key string and a value string
+
+    #How do i sort a dictionary?
+    #dict(sorted(wordDict.items()))
+
+    for key, value in wordDict.items():
+        processedFile.write('%s: %d\n' % (key, value))
+    
     tokensToDict.close()
+    processedFile.close()
 
 
 main()
