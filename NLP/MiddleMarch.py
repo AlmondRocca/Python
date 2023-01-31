@@ -56,6 +56,7 @@ def processToDict():
                 wordDict[word] = 1
     #How do i display this pretty
     print(wordDict)
+    tokensToDict.close()
 
 
 main()
