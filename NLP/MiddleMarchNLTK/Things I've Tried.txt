@@ -1,0 +1,26 @@
+I tried reinstalling python on my windows machine
+I tried upgrading pip, python, wheel, setuptools, ez_setup
+I tried setting the environment variables again
+I tried whatever the terminal told me
+My best guess is that its a compatibility problem with mingw that I had for C++
+Also I cant pip install anything
+
+On the linux machine it comes with nltk by default but I cant import nltk and cant download the nltk thing.
+I manually downloaded and extracted it but I cant find documentation on where it should go.
+
+it said this:
+
+  Attempted to load tokenizers/punkt/PY3/english.pickle
+
+  Searched in:
+    - '/home/csuser/nltk_data'
+    - '/usr/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+    - ''
+
+so I went and put it in there and it seems to have worked.
